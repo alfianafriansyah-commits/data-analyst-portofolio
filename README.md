@@ -17,4 +17,4 @@ Physics graduate from Universitas Brawijaya with a strong passion for data analy
 
 **Skills:** SQL (window functions, CTE, agregasi kompleks), BigQuery, Looker Studio, Python (pandas), dashboard & reporting.
 
-📫 Kontak: alfianafriansyah@gmail.com · GitHub: [@alfianafriansyah](https://github.com/alfianafriansyah) · LinkeIn: [@alfianafriansyah](https://www.linkedin.com/in/alfianafriansyah/)
+📫 Kontak: alfianafriansyah@gmail.com · GitHub: [@alfianafriansyah](https://github.com/alfianafriansyah) · LinkedIn: [@alfianafriansyah](https://www.linkedin.com/in/alfianafriansyah/)
