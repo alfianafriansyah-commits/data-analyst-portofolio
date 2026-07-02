@@ -5,7 +5,7 @@
 As SuryaHub prepares its marketing strategy for July 2025, the marketing team needs data-driven evidence to support key business decisions. The primary objective is to determine whether the existing loyalty program effectively increases customer purchase frequency and spending. If not, the analysis aims to identify the customer segments that should be prioritized to maximize future revenue.
 
 ## 2. Data & Tools
-- **Dataset:** 5A dataset of 500 SuryaHub transactions collected in June 2025. The dataset includes customer demographics, purchase history, loyalty status, transaction channels, purchase intent, and social media influence, providing a comprehensive view of customer behavior and purchasing patterns.
+- **Dataset:** A dataset of 500 SuryaHub transactions collected in June 2025. The dataset includes customer demographics, purchase history, loyalty status, transaction channels, purchase intent, and social media influence, providing a comprehensive view of customer behavior and purchasing patterns.
 - **Tools:** SQL (BigQuery), Looker Studio
 
 ## 3. Scorecard
