@@ -1,51 +1,51 @@
 # SuryaHub Customer Behavior Analysis
-**Data-Driven Strategy untuk Meningkatkan Revenue per Customer (Juli 2025)**
+**Data-Driven Strategies to Increase Revenue per Customer (Juli 2025)**
 
 ## 1. Business Problem
-Tim Marketing SuryaHub membutuhkan dasar keputusan yang konkret sebelum memasuki Juli 2025. Pertanyaan utama: apakah program loyalitas yang sudah berjalan benar-benar mengubah pelanggan biasa menjadi pelanggan yang lebih sering dan lebih banyak belanja? Jika tidak, segmen mana yang seharusnya menjadi prioritas?
+As SuryaHub prepares its marketing strategy for July 2025, the marketing team needs data-driven evidence to support key business decisions. The primary objective is to determine whether the existing loyalty program effectively increases customer purchase frequency and spending. If not, the analysis aims to identify the customer segments that should be prioritized to maximize future revenue.
 
 ## 2. Data & Tools
-- **Dataset:** 500 transaksi SuryaHub, periode Juni 2025 — mencakup profil pelanggan, riwayat pembelian, status loyalitas, channel transaksi, purchase intent, dan pengaruh media sosial
+- **Dataset:** 5A dataset of 500 SuryaHub transactions collected in June 2025. The dataset includes customer demographics, purchase history, loyalty status, transaction channels, purchase intent, and social media influence, providing a comprehensive view of customer behavior and purchasing patterns.
 - **Tools:** SQL (BigQuery), Looker Studio
 
 ## 3. Scorecard
 
-| Metrik | Nilai |
+| Metrics | Score |
 |---|---|
 | Total Revenue | Rp 2,1 M |
-| Total Transaksi | 500 |
+| Total Transactions | 500 |
 | Total Customer | 499 |
-| Rata-rata Transaksi | Rp 4,2 jt |
+| Average Transactions | Rp 4,2 jt |
 
 ## 4. Key Findings
 
-### A. Program Loyalitas Tidak Efektif Meningkatkan Nilai Pelanggan
-| Status | Avg Spending | Frekuensi |
+### A. The Loyalty Program Is Not Effectively Increasing Customer Value
+| Status | Avg Spending | Frequency |
 |---|---|---|
 | Member (TRUE) | Rp 4.104.058 | 6,68x |
 | Non-Member (FALSE) | Rp 4.375.335 | 6,99x |
-| **Selisih** | **Rp 271.277 lebih rendah (member)** | **0,31x lebih jarang (member)** |
+| **Difference** | **Rp 271.277 lower (member)** | **0,31x lower (member)** |
 
-Non-member belanja lebih besar **dan** lebih sering dibanding member. Diperkuat oleh data Brand Loyalty score = 5: dari pelanggan paling loyal tersebut, 60 orang tidak pernah pakai diskon, hanya 46 orang yang pakai. Diskon bukan faktor pembentuk loyalitas di SuryaHub.
+Non-members spend more and purchase more frequently than members, indicating that the current loyalty program does not effectively drive customer value. This finding is reinforced by the Brand Loyalty Score analysis: among customers with the highest loyalty score (5), 60 never used discounts, while only 46 did, suggesting that discounts are not the primary driver of customer loyalty at SuryaHub.
 
 ### B. High Spender ≠ High Loyalty
-6 dari 10 pelanggan dengan pengeluaran tertinggi memiliki brand loyalty score ≤3. Dua pelanggan dengan total pengeluaran terbesar (>Rp7,7 juta) justru memiliki skor loyalitas terendah (1). Loyalty score saat ini gagal merepresentasikan nilai ekonomi pelanggan.
+6 of 10 highest-spending customers have a Brand Loyalty Score of 3 or below. Notably, the two highest spenders (over IDR 7.7 million) both have the lowest loyalty score (1), indicating that the current loyalty score does not accurately reflect customers' economic value.
 
 ### C. Geografi
-Makassar memiliki jumlah pelanggan terbanyak (95), mengalahkan Jakarta (89), Bandung (82), Surabaya & Medan (masing-masing 78) — berlawanan dengan asumsi umum bahwa Jakarta jadi pusat pasar e-commerce. Top 10 spender tersebar di berbagai kota (Bandung, Surabaya, Makassar, Jakarta, Papua), tidak terkonsentrasi di satu wilayah.
+Makassar has the largest customer base (95), surpassing Jakarta (89), Bandung (82), Surabaya (78), and Medan (78), challenging the common assumption that Jakarta is the primary e-commerce market. Additionally, the top 10 highest-spending customers are geographically diverse, spanning Bandung, Surabaya, Makassar, Jakarta, and Papua, indicating that high-value customers are not concentrated in a single region.
 
 ### D. Purchase Intent
-- **Impulsive** → rata-rata spending **terendah** (berlawanan dengan asumsi umum bahwa pembeli impulsif paling responsif promosi)
-- **Planned** → rata-rata spending **tertinggi**
-- **Need-based** → rata-rata spending kedua tertinggi, dan frekuensi transaksi **tertinggi** (menyumbang ~26% dari total transaksi)
+- **Impulsive** → average spending **lowest** (challenging the common assumption that impulsive buyers are the most responsive to promotions.)
+- **Planned** → average spending **highest**
+- **Need-based** → This segment has the second-highest average spending and the highest purchase frequency, accounting for approximately 26% of all transactions.
 
 ### E. Channel
-- **Mixed Channel** (online + offline) → rata-rata spending tertinggi, kontribusi transaksi tertinggi (36,4%)
-- **In-Store** → frekuensi transaksi tertinggi (rata-rata 7,14x), kontribusi 31,2%
-- **Online** → kontribusi 32,4%
+- **Mixed Channel** (online + offline) → This segment has the highest average spending and contributes the largest share of total transactions (36.4%).
+- **In-Store** → This segment has the highest purchase frequency, averaging 7.14 transactions per customer and accounting for 31.2% of all transactions.
+- **Online** → Contributing 32.4% of total transactions
 
 ### F. Social Media Influence
-Pengaruh High (~Rp582 jt total sales) vs None (~Rp495 jt) — selisihnya tidak cukup besar untuk disimpulkan sebagai faktor utama pendorong nilai transaksi. Perlu pengujian lebih lanjut.
+Customers with high social media influence generated approximately IDR 582 million in total sales, compared with IDR 495 million for those with no social media influence. However, the difference is not substantial enough to conclude that social media is the primary driver of transaction value, indicating that further analysis is required.
 
 ## 5. SQL Queries
 
@@ -78,24 +78,15 @@ LIMIT 10;
 ```
 
 ## 6. Recommendations
-1. **Redesign program loyalitas** — dari basis membership ke basis spending tier (Bronze/Silver/Gold), dengan benefit non-diskon (akses early sale, gratis ongkir, layanan prioritas)
-2. **Pilot kampanye regional di Makassar** — sebagai kota dengan pelanggan terbanyak, layak mendapat pendekatan spesifik, bukan kampanye nasional seragam
-3. **Penguatan cross-channel activation** — click & collect, insentif ringan untuk pelanggan single-channel agar beralih ke mixed-channel
-4. **Fokus pada segmen Planned & Need-based buyer** — investasi ke product review, stok real-time, bundling; kurangi dependensi pada flash sale
+1. Redesign the loyalty program by replacing the membership-based model with a spending-tier system (Bronze, Silver, Gold) and offering non-discount benefits such as early sale access, free shipping, and priority support.
+2. Launch a regional marketing pilot in Makassar, leveraging its largest customer base with localized campaigns instead of a one-size-fits-all national strategy.
+3. Strengthen cross-channel engagement by promoting services such as Click & Collect and providing incentives for single-channel customers to adopt omnichannel purchasing.
+4. Prioritize Planned and Need-Based Buyers by investing in detailed product reviews, real-time inventory visibility, and product bundling while reducing reliance on flash-sale promotions.
 
 ## 7. Dashboard
 [Lihat Dashboard di Looker Studio](https://datastudio.google.com/reporting/03f00b27-4c4c-423a-8007-570908670c09)
 
 ![Scorecard SuryaHub](./dashboard-screenshots/scorecard.png)
-
-## 8. Files
-```
-├── README.md
-├── sql/
-│   └── queries.sql
-├── dashboard-screenshots/
-└── Final_Project_Alfian_Afriansyah.pdf   ← laporan analyst lengkap
-```
 
 ---
 **Author:** Alfian Afriansyah · alfianafriansyah@gmail.com
